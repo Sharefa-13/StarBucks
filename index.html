@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: gotham;
+            src: url(GothamBold.ttf);
+        }
+
+        .mainnav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .mainnav .logo {
+            width: 70px;
+            height: 70px;
+        }
+
+        .mainnav .btn {
+            width: 35px;
+            height: 35px;
+            margin-bottom: 10px;
+        }
+
+        @media screen and (min-width:800px) {
+            .mainnav {
+                box-shadow: 0px 10px 95px rgb(216, 216, 216);
+            }
+
+            body {
+                margin: 0;
+            }
+        }
+
+        h3 {
+            margin-left: 25px;
+            font-family: gotham;
+            color: green;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        .btnGR:hover {
+            background-color: green;
+            color: white;
+        }
+
+        .underheader {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .searchbar {
+            position: relative;
+        }
+
+        .searchbar input {
+            width: 400px;
+            height: 50px;
+            border-radius: 15px;
+            background: rgb(216, 216, 216);
+            border: 2px solid rgb(216, 216, 216);
+        }
+
+        .searchbar img {
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            right: 30px;
+            top: 14px;
+        }
+
+        .btncontainer {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .btnG {
+            width: 60px;
+            height: 30px;
+            color: white;
+            background-color: rgb(1, 119, 1);
+            border: 1px solid rgb(1, 119, 1);
+            border-radius: 10px;
+            margin: 5px;
+        }
+
+        .btnGR {
+            width: 100px;
+            height: 30px;
+            color: black;
+            background-color: rgb(216, 216, 216);
+            border: 1px solid rgb(216, 216, 216);
+            border-radius: 5px;
+            margin: 5px;
+        }
+
+        .maincontainer {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+            position: relative;
+        }
+
+        .maincontainer2 {
+            display: flex;
+            justify-content: space-around;
+            position: relative;
+            margin-top: 350px;
+            height: 300px;
+        }
+
+        .mainsection {
+            position: relative;
+            height: 0;
+
+        }
+
+        .mainsection img {
+            width: 150px;
+            height: 200px;
+            position: absolute;
+            top: 10px;
+            left: 15px;
+
+        }
+
+        .secondsection {
+            position: relative;
+            height: 0;
+        }
+
+        .secondsection img {
+            width: 150px;
+            height: 200px;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+        }
+
+        .firstbg {
+            width: 170px;
+            height: 270px;
+            background-color: white;
+            border-top-left-radius: 85px;
+            border-top-right-radius: 85px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            box-shadow: 1px 1px 15px 1px rgb(190, 190, 190);
+            padding: 5px;
+        }
+
+
+        .num1 {
+            position: relative;
+            top: 220px;
+            left: 22px;
+            font-family: sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .num2 {
+            position: relative;
+            top: 225px;
+            left: 45px;
+            font-family: gotham;
+            font-size: 15px;
+            color: rgb(85, 83, 83);
+        }
+
+        .num3 {
+            position: relative;
+            top: 220px;
+            left: 40px;
+            font-family: sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        .num33 {
+            left: 10px;
+        }
+
+        .num4 {
+            position: relative;
+            top: 220px;
+            left: 5px;
+            font-family: sans-serif;
+            font-size: 17px;
+            font-weight: 700;
+        }
+
+        .num5 {
+            position: relative;
+            top: 220px;
+            left: 22px;
+            font-family: sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+
+
+        .secondbg {
+            width: 140px;
+            height: 175px;
+            background: rgb(245, 245, 193);
+            position: relative;
+            bottom: 260px;
+            left: 20px;
+            border-top-left-radius: 85px;
+            border-top-right-radius: 85px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            box-shadow: 5px 5px 12px rgb(190, 190, 190);
+        }
+
+        .secondpartbg {
+            width: 140px;
+            height: 175px;
+            background: lightcoral;
+            position: relative;
+            bottom: 260px;
+            left: 20px;
+            border-top-left-radius: 85px;
+            border-top-right-radius: 85px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            box-shadow: 5px 5px 12px rgb(190, 190, 190);
+        }
+
+        .secondbg2 {
+            background: lightblue;
+        }
+
+        .secondbg3 {
+            background-color: lightgreen;
+        }
+
+        @media screen and (min-width:800px) {
+            .maincontainer {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .maincontainer2 {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .mainsection {
+                position: relative;
+              height: 400px;
+            }
+
+            .mainsection img {
+                width: 270px;
+                height: 320px;
+                position: absolute;
+                left: 35px;
+                top: 0;
+            }
+
+            .secondsection {
+                position: relative;
+                height: 200px;
+                
+            }
+
+            .secondsection img {
+                width: 250px;
+                height: 300px;
+                position: absolute;
+                left: 1050px;
+                top: 0;
+            }
+
+            .firstbg {
+                width: 97vw;
+                height: 300px;
+                background-color: white;
+                border-radius: 0;
+                padding: 10px;
+                position: relative;
+            }
+            .secondbg {
+                width: 250px;
+                height: 320px;
+                border-radius: 0;
+                position: relative;
+                left: 50px;
+                bottom: 320px; 
+                box-shadow: 0 0 0;
+            }
+            .secondbg2 {
+                width: 250px;
+                height: 320px;
+                border-radius: 0;
+                background-color: lightblue;
+                position: relative;
+                left: 1050px;
+            }
+
+            .num1 {
+                position: relative;
+                top: 30px;
+                left: 330px;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                font-size: 60px;
+                font-weight: 200;
+            }
+            .numC1 {
+                color: goldenrod;
+            }
+            .num2 {
+                position: relative;
+                top: 40px;
+                left: 335px;
+                font-family: sans-serif;
+                font-size: 20px;
+            }
+            .numright {
+                position: relative;
+                top: 60px;
+                left: 910px;
+                font-family: sans-serif;
+                font-size: 20px;
+            }
+            .numC2 {
+                color: rgb(90, 198, 231);
+            }
+            .num3 {
+                position: relative;
+                top: 50px;
+                left: 750px;
+                font-size: 60px;
+                font-weight: 200;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            }
+            .numC3 {
+                color: lightcoral;
+            }
+            .numC4 {
+                color: lightgreen;
+            }
+            .secondpartbg {
+                width: 250px;
+                height: 320px;
+                border-radius: 0;
+                position: relative;
+                left: 50px;
+                bottom: 320px; 
+                box-shadow: 0 0 0;
+            }
+            .secondbg2{
+                background-color: lightblue;
+            }
+            .secondbg3 {
+                width: 250px;
+                height: 320px;
+                border-radius: 0;
+                background-color: lightgreen;
+                position: relative;
+                left: 1050px;
+            }
+            .num4 {
+                position: relative;
+                top: 30px;
+                left: 330px;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                font-size: 60px;
+                font-weight: 200;
+                
+            }
+            .num3AF {
+                position: relative;
+                left: 630px;
+            }
+            .secondpartbg {
+                color: lightgreen;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="mainnav">
+            <img class="logo" src="imgs/icons8-starbucks-144.png" alt="logo">
+            <img class="btn" src="imgs/icons8-location-96.png" alt="" location>
+            <img class="btn" src="imgs/icons8-buying-96.png" alt="shoping">
+        </nav>
+        <h3>Hey, Its an amazing day for coffee!</h3>
+        <div class="underheader">
+            <div class="searchbar">
+                <input type="search" placeholder="Search coffees,wraps,sweets...">
+                <img src="imgs/search.png" alt="search">
+            </div>
+        </div>
+    </header>
+
+    <main class="btncontainer">
+        <button class="btnG">Menu</button>
+        <button class="btnGR">Featured</button>
+        <button class="btnGR">Favourites</button>
+        <button class="btnGR">Previous</button>
+    </main>
+    <main class="maincontainer">
+        <section class="mainsection">
+            <div class="firstbg">
+                <span class="num1">Dark Chocolate</span>
+                <br>
+                <span class="num2 numC1">frappuccino</span>
+            </div>
+            <div class="secondbg "></div>
+            <img src="imgs/112-1124167_target-and-starbucks-gift-card-hd-png-download-removebg-preview.png"
+                alt="blackCoffee">
+        </section>
+        <section class="secondsection">
+            <div class="firstbg">
+                <span class="num3">White milk</span>
+                <br>
+                <span class="numright num2 numC2">frappuccino</span>
+            </div>
+            <div class="secondbg secondbg2 secondbgAF "></div>
+            <img src="imgs/544-5445241_starbucks-coffee-starbucks-png-transparent-png-removebg-preview.png"
+                alt="blackCoffee">
+        </section>
+    </main>
+    <main class="maincontainer2">
+        <section class="mainsection">
+            <div class="firstbg">
+                <span class="num4">Chocolate With Milk</span>
+                <br>
+                <span class="num2 numC3 ">frappuccino</span>
+            </div>
+            <div class="secondpartbg"></div>
+            <img src="imgs/544-5445259_starbucks-frappuccino-png-transparent-background-starbucks-png-png-removebg-preview.png"
+                alt="blackCoffee">
+        </section>
+        <section class="secondsection">
+            <div class="firstbg">
+                <span class="num3 num33 num3AF">milk with honey</span>
+                <br>
+                <span class="numright numC4 num2">frappuccino</span>
+            </div>
+            <div class="secondpartbg secondbg3 "></div>
+            <img src="imgs/95-951389_starbucks-drink-coffee-dad-hat-starbucks-png-transparent-removebg-preview.png"
+                alt="blackCoffee">
+        </section>
+    </main>
+    <footer>
+        
+    </footer>
+</body>
+
+</html>
